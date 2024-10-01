@@ -54,12 +54,6 @@ export default function RootLayout({
       >
         {children}
         {/* Example image with alt attribute for SEO */}
-        <img
-          src="https://yourwebsite.com/images/example.jpg"
-          alt="Description of the image"
-          width={600}
-          height={400}
-        />
       </body>
     </html>
   );
