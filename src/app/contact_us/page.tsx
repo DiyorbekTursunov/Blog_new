@@ -250,7 +250,7 @@ export default function ContactUs() {
             </section>
 
             <section className="social">
-                <div className="socila_container flex-wrap" style={{maxWidth: "1462px"}}>
+                <div className="socila_container flex" style={{maxWidth: "1462px"}}>
                     <div className="social_card email">
                         <h2 className="social_card_title">
                             Subscribe to our newsletter
