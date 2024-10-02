@@ -13,7 +13,7 @@ export const dataNav: INavCol[] = [
                 title: "How it Works",
             },
             {
-                href: "",
+                href: "/contact_us",
                 title: "Get Funded",
             },
         ],

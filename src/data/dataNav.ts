@@ -24,7 +24,7 @@ export const dataNav: INav[] = [
 
     {
         title: "FAQ",
-        href: "/",
+        href: "/faqs_home",
         section: "#faq",
     },
 ]
