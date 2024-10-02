@@ -1,0 +1,43 @@
+.Answers {
+    @include container();
+
+    display: flex;
+    padding-block: get-d(60px);
+}
+
+.Answers_info {
+    width: get-d(600px);
+}
+
+.Answers_title {
+    font-size: get-d(44px);
+}
+
+.Answers_text {
+    width: get-d(380px);
+    margin-top: get-d(44px);
+
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    span {
+        display: inline;
+        @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+    }
+
+    a {
+        display: inline;
+        color: #fff;
+        text-decoration-line: underline;
+    }
+}
+
+.Answers_btn {
+    margin-top: get-d(44px);
+}
+
+.Answers_list {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+}

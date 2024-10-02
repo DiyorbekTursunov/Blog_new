@@ -1,0 +1,46 @@
+.Answer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.Answer_title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #303031;
+    font-size: 16px;
+
+    span {
+        color: #ff0b0b;
+    }
+}
+
+.Answer_input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Answer_list {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: fit-content;
+
+    border-radius: 2px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(20, 20, 20, 0.1);
+    }
+}

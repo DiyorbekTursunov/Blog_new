@@ -1,0 +1,23 @@
+.NavItem {
+    width: fit-content;
+
+    font-size: get-d(14px);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: get-d(-0.28px);
+
+    transition: 0.2s ease-in-out;
+    transition-property: opacity;
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        scale: 0.95;
+    }
+}

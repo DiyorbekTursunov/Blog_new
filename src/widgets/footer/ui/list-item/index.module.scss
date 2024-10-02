@@ -1,0 +1,21 @@
+.ListItem {
+    display: flex;
+    flex-direction: column;
+    gap: get-d(10px);
+
+    opacity: 0.5;
+}
+
+.ListItem_title {
+    color: #9fa4b2;
+    font-size: get-d(12px);
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.ListItem_text {
+    color: #9fa4b2;
+    font-size: get-d(12px);
+    font-weight: 400;
+    line-height: 140%;
+}

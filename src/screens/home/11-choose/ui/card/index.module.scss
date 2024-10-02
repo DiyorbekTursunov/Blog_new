@@ -1,0 +1,164 @@
+.Card {
+    position: relative;
+    width: get-d(380px);
+
+    border-radius: get-d(16px);
+    border: get-d(1.5px) solid rgba(#d5dfff, 0.1);
+    background: linear-gradient(
+        166deg,
+        rgba(255, 255, 255, 0.01) 4.29%,
+        rgba(255, 255, 255, 0.01) 72.39%
+    );
+    backdrop-filter: blur(get-d(10px));
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+
+        width: calc(100% + get-d(22px));
+        height: calc(100% + get-d(22px));
+
+        border-radius: get-d(24px);
+        border: get-d(1.5px) solid rgba(#d5dfff, 0.1);
+        backdrop-filter: blur(get-d(4px));
+    }
+
+    &:hover {
+        .Card_border {
+            opacity: 1;
+        }
+    }
+}
+
+.Card_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    opacity: 0;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+
+    transition: 0.5s ease-in-out;
+    transition-property: opacity;
+}
+
+.Card_content {
+    position: relative;
+    overflow: hidden;
+
+    padding: get-d(40px) get-d(30px);
+}
+
+.Card_title {
+    font-size: get-d(16px);
+    line-height: 100%;
+    font-weight: 500;
+    letter-spacing: get-d(-0.32px);
+
+    @include textGradient(linear-gradient(90deg, #6871ff 0%, #5c5f9a 100%));
+}
+
+.Card_price {
+    margin-top: get-d(40px);
+
+    font-size: get-d(40px);
+    line-height: 110%;
+    font-weight: 500;
+    letter-spacing: get-d(-0.8px);
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+
+    span {
+        font-size: get-d(14px);
+        line-height: 142.857%;
+
+        opacity: 0.5;
+
+        @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+    }
+}
+
+.Card_text {
+    margin-top: get-d(32px);
+
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.Card_button {
+    width: 100%;
+    margin-top: get-d(36px);
+}
+
+.Card_separator {
+    width: 100%;
+    height: get-d(1px);
+    margin-block: get-d(20px);
+
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 100%
+    );
+}
+
+.Card_benefits {
+}
+
+.Card_benefits_title {
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.Card_benefits_list {
+    position: relative;
+    margin-top: get-d(18px);
+}
+
+.Card_benefits_more {
+    position: relative;
+    overflow: visible;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: get-d(10px);
+    margin-top: get-d(24px);
+
+    font-size: get-d(14px);
+    line-height: 100%;
+
+    cursor: pointer;
+
+    &.active {
+        svg {
+            rotate: 180deg;
+        }
+    }
+
+    svg {
+        height: 100%;
+        width: auto;
+
+        @include paintSVG(#fff);
+
+        transition: 0.5s ease-in-out;
+        transition-property: rotate;
+    }
+}

@@ -1,0 +1,11 @@
+.Join {
+    @include container();
+
+    display: flex;
+    gap: get-d(20px);
+    padding-block: get-d(60px);
+
+    > div {
+        flex: 1 0 0;
+    }
+}

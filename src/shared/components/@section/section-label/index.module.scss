@@ -1,0 +1,20 @@
+.SectionLabel {
+    width: fit-content;
+    padding: get-d(10px) get-d(16px);
+
+    border-radius: 1000px;
+    border: get-d(1px) solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+        180deg,
+        rgba(8, 5, 32, 0.4) 0%,
+        rgba(38, 42, 84, 0.4) 100%
+    );
+    backdrop-filter: blur(get-d(2px));
+}
+
+.SectionLabel_text {
+    font-size: get-d(14px);
+    font-weight: 600;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}

@@ -1,0 +1,17 @@
+.ButtonLoading {
+    &:disabled {
+        opacity: 0.7 !important;
+        pointer-events: none;
+
+        svg {
+            height: get-d(15px);
+            width: auto;
+
+            @include paintSVG(#fff);
+
+            @media screen and (max-width: $tablet) {
+                height: get-m(15px);
+            }
+        }
+    }
+}

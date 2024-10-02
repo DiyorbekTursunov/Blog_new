@@ -1,0 +1,41 @@
+.OurPlatform {
+    @include container();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: get-d(70px) get-d(150px);
+}
+
+.OurPlatform_title {
+    margin-top: get-d(42px);
+    width: get-d(600px);
+
+    text-align: center;
+}
+
+.OurPlatform_slides {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: get-d(115px);
+    width: 100%;
+    margin-top: get-d(100px);
+}
+
+.OurPlatform_slides_info {
+    display: flex;
+    flex-direction: column;
+    gap: get-d(50px);
+    width: get-d(410px);
+}
+
+.OurPlatform_slides_image {
+    position: relative;
+    display: flex;
+    flex: 1 0 0;
+}
+
+.OurPlatform_button {
+    margin-top: get-d(70px);
+}

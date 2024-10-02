@@ -1,0 +1,79 @@
+@mixin textOverflowVertical($linesCount: 1) {
+    display: -webkit-box;
+    -webkit-line-clamp: $linesCount;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin textGradient($gradientColor) {
+    background: $gradientColor;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+@mixin gridCols($cols, $gap) {
+    flex: 0 0 calc(#{100% / $cols} - #{$gap * ($cols - 1) / $cols}px);
+    max-width: calc(#{100% / $cols} - #{$gap * ($cols - 1) / $cols}px);
+}
+
+@mixin grid($cols, $gapRow, $gapCol: $gapRow, $selector: li) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: #{$gapCol}px #{$gapRow}px;
+
+    > #{$selector} {
+        @include gridCols($cols, $gapRow);
+    }
+}
+
+@mixin font(
+    $fontSize: 14px,
+    $fontWeight: 400,
+    $lineHeight: 1.2,
+    $fontFamily: $f-Aventa
+) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    font-family: $fontFamily;
+}
+
+@mixin paintSVG($color: $c-primary) {
+    path,
+    g {
+        &[fill] {
+            fill: $color;
+
+            // transition: 1s ease-in-out;
+            // transition-property: fill;
+        }
+
+        &[stroke] {
+            stroke: $color;
+
+            // transition: 1s ease-in-out;
+            // transition-property: stroke;
+        }
+    }
+}
+
+@mixin adaptiveTheSameValue($valueName, $value) {
+    #{$valueName}: get-d($value);
+
+    @media screen and (max-width: $tablet) {
+        #{$valueName}: get-t($value);
+    }
+
+    @media screen and (max-width: $mobile) {
+        #{$valueName}: get-m($value);
+    }
+}
+
+//custom
+@mixin container() {
+    width: 100%;
+    padding-inline: get-d(182px);
+}

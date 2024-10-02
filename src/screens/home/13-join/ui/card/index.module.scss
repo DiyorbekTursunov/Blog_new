@@ -1,0 +1,58 @@
+.Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    aspect-ratio: 1 / 1.05;
+    padding: get-d(40px);
+
+    border-radius: get-d(16px);
+    border: get-d(2px) solid #d5dfff18;
+    background: linear-gradient(
+        166deg,
+        rgba(255, 255, 255, 0) 4.29%,
+        rgba(255, 255, 255, 0.01) 72.39%
+    );
+    backdrop-filter: blur(get-d(4px));
+}
+
+.Card_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.Card_title {
+    text-align: center;
+    font-size: get-d(18px);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: get-d(-0.36px);
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+}
+
+.Card_text {
+    margin-top: get-d(18px);
+
+    text-align: center;
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.Card_action {
+    margin-top: get-d(25px);
+}

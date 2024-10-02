@@ -1,0 +1,53 @@
+.OutBenefits {
+    position: relative;
+    padding-inline: get-d(180px);
+    margin-top: get-d(100px);
+    padding-bottom: get-d(50px);
+}
+
+
+.OutBenefits_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.OutBenefits_header_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: get-d(40px);
+    width: fit-content;
+}
+
+.OutBenefits_text {
+    width: get-d(380px);
+
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.OutBenefits_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: get-d(20px);
+    width: 100%;
+    margin-top: get-d(80px);
+
+    mix-blend-mode: screen;
+
+    > div {
+        &:nth-child(1),
+        &:nth-child(2) {
+            grid-column: span 3 / span 3;
+            height: get-d(400px);
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+            grid-column: span 2 / span 2;
+            height: get-d(480px);
+        }
+    }
+}

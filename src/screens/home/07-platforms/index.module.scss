@@ -1,0 +1,52 @@
+.Platforms {
+    @include container();
+    padding-block: get-d(100px);
+}
+
+.Platforms_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Platforms_info {
+    position: relative;
+    z-index: 5;
+}
+
+.Platforms_title {
+    width: get-d(350px);
+    margin-top: get-d(42px);
+}
+
+.Platforms_text {
+    width: get-d(400px);
+    margin-top: get-d(48px);
+
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.Platforms_grid {
+    will-change: transform;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+
+    display: grid;
+    grid-template-columns: repeat(8, get-d(100px));
+    grid-template-rows: repeat(5, get-d(100px));
+    gap: get-d(1.5px);
+
+    padding: get-d(1.5px);
+
+    background: radial-gradient(
+        closest-side at 55% 45%,
+        #2d364c 0%,
+        transparent 100%
+    );
+}

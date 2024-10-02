@@ -1,0 +1,17 @@
+.LogoSmall {
+    height: get-d(36px);
+
+    @media screen and (max-width: $tablet) {
+        height: get-t(45px);
+    }
+
+    @media screen and (max-width: $mobile) {
+        height: get-m(45px);
+    }
+
+    svg,
+    img {
+        height: 100%;
+        width: auto;
+    }
+}

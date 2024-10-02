@@ -1,0 +1,85 @@
+.GetStarted {
+    position: relative;
+
+    @include container();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-block: get-d(170px) get-d(70px);
+}
+
+.GetStarted_bg {
+    position: absolute;
+    left: 50%;
+    top: get-d(150px);
+    translate: -50% 0;
+
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.GetStarted_title {
+    text-align: center;
+
+    > a {
+        svg {
+            height: get-d(40px);
+        }
+    }
+}
+
+.GetStarted_text {
+    margin-top: get-d(44px);
+
+    text-align: center;
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}
+
+.GetStarted_app {
+    position: relative;
+    width: 100%;
+    margin-top: get-d(55px);
+}
+
+.GetStarted_app_light {
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 50%;
+    translate: -50% -70%;
+
+    width: 80%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.GetStarted_app_card {
+    width: 100%;
+    padding: get-d(10px);
+
+    border-radius: get-d(26px);
+    border: get-d(1px) solid #4a4b70;
+    background-color: rgba($c-bg, 0.3);
+    backdrop-filter: blur(get-d(50px));
+
+    img {
+        width: 100%;
+        height: auto;
+
+        border-radius: get-d(18px);
+        background-color: rgba($c-bg, 0.5);
+    }
+}

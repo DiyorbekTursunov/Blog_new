@@ -1,0 +1,60 @@
+.InfoItem {
+    width: 100%;
+
+    opacity: 0.3;
+
+    transition: 0.3s ease-in-out;
+    transition-property: opacity;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+.InfoItem_suptitle {
+    display: flex;
+    align-items: center;
+    gap: get-d(8px);
+
+    font-size: get-d(16px);
+    line-height: 100%;
+    letter-spacing: get-d(-0.32px);
+
+    @include textGradient(linear-gradient(90deg, #6871ff 0%, #5c5f9a 100%));
+
+    svg {
+        height: get-d(18px);
+        width: auto;
+
+        @include paintSVG(#6871ff);
+    }
+}
+
+.InfoItem_title {
+    margin-top: get-d(24px);
+
+    font-size: get-d(20px);
+    letter-spacing: get-d(-0.4px);
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+}
+
+.InfoItem_text_container {
+    position: relative;
+    margin-top: get-d(24px);
+    width: 100%;
+    height: 0;
+}
+
+.InfoItem_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: get-d(14px);
+    line-height: 142.857%;
+
+    // @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+}

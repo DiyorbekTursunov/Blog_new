@@ -1,0 +1,49 @@
+// fonts
+$f-Aventa: var(--var-aventa), Arial, sans-serif;
+
+// colors
+$c-primary: #ffffff;
+$c-blue: #3a48e0;
+$c-link: #51d4fe;
+
+$c-bg: #02010d;
+
+// gradients
+$g-blue: linear-gradient(255deg, #a4bdfe 16.14%, #7a9cf5 103.93%);
+
+// screens
+$desktop: 1600px;
+$laptop: 1440px;
+$laptop-s: 1366px;
+$tablet: 1024px;
+$mobile: 565px;
+
+$s-desktop: 1600px;
+$s-laptop: 1440px;
+$s-tablet: 1024px;
+$s-mobile: 565px;
+
+@function get-d($target) {
+    $vw-context: calc((1510 * 0.01) * 1px);
+    @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-ds($target) {
+    $vw-context: calc((1440 * 0.01) * 1px);
+    @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-tl($target) {
+    $vw-context: calc((1024 * 0.01) * 1px);
+    @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-t($target) {
+    $vw-context: calc((650 * 0.01) * 1px);
+    @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-m($target) {
+    $vw-context: calc((430 * 0.01) * 1px);
+    @return calc(($target / $vw-context) * 1vw);
+}

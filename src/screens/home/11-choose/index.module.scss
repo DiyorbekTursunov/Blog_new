@@ -1,0 +1,26 @@
+.Choose {
+    @include container();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: get-d(180px) get-d(70px);
+}
+
+.Choose_title {
+    width: get-d(400px);
+
+    text-align: center;
+}
+
+.Choose_selector {
+    margin-top: get-d(60px);
+}
+
+.Choose_card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: get-d(35px);
+    margin-top: get-d(64px);
+}

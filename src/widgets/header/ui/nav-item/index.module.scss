@@ -1,0 +1,9 @@
+.NavItem {
+    font-size: get-d(16px);
+    line-height: 100%;
+
+    span {
+        color: rgba(255, 255, 255, 0.25);
+        font-size: get-d(14px);
+    }
+}

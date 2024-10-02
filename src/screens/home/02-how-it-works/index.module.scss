@@ -1,0 +1,46 @@
+.HowItWorks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: get-d(70px) get-d(180px);
+}
+
+.HowItWorks_title {
+    width: get-d(550px);
+    margin-top: get-d(42px);
+
+    text-align: center;
+}
+
+.HowItWorks_list {
+    position: relative;
+    width: 100%;
+    height: get-d(700px);
+    margin-top: get-d(250px);
+}
+
+.HowItWorks_line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    mask-image: linear-gradient(to top, transparent 40%, #000 60%);
+
+    > svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.HowItWorks_list_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: get-d(7px);
+    aspect-ratio: 1 / 1;
+
+    border-radius: 100%;
+    background: #fff;
+}

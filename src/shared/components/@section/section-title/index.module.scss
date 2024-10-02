@@ -1,0 +1,17 @@
+.SectionTitle {
+    font-size: get-d(55px);
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: get-d(-1.1px);
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+
+    > a,
+    > svg,
+    > img {
+        display: inline;
+        vertical-align: baseline;
+    }
+}

@@ -1,0 +1,27 @@
+.ListItem {
+}
+
+.ListItem_counter {
+    font-size: get-d(24px);
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: get-d(-0.48px);
+
+    @include textGradient(
+        linear-gradient(180deg, #d3d5e5 0.17%, #aeb0c9 99.83%)
+    );
+
+    opacity: 0;
+}
+
+.ListItem_text {
+    width: get-d(100px);
+    margin-top: get-d(16px);
+
+    font-size: get-d(12px);
+    line-height: 133.333%;
+
+    @include textGradient(linear-gradient(90deg, #b9c3f4 0%, #6c728e 100%));
+
+    opacity: 0;
+}

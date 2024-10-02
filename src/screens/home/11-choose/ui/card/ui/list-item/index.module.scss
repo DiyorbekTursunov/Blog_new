@@ -1,0 +1,19 @@
+.ListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: get-d(7px);
+}
+
+.ListItem_title {
+    color: #71789b;
+    font-size: get-d(14px);
+    line-height: 142.857%;
+}
+
+.ListItem_text {
+    display: flex;
+    align-items: center;
+    gap: get-d(7px);
+    font-size: get-d(16px);
+}

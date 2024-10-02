@@ -1,0 +1,17 @@
+.GridItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $c-bg;
+
+    &.image {
+        grid-column: span 2;
+    }
+
+    img {
+        width: 80%;
+        height: 70%;
+        object-fit: contain;
+    }
+}
