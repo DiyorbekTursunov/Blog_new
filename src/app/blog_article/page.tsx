@@ -1,4 +1,5 @@
 import Image from "next/image";
+<<<<<<< HEAD
 import headerLogo from "../../components/images/header/header_logo.svg";
 import blog_header_image from "../../components/images/blog_header.png";
 import blog_header_bg from "../../components/images/blog_header_bg.png";
@@ -12,6 +13,21 @@ export default function BlogArticle() {
   return (
     <div className="bg-[#04030D] w-full pt-16">
          {/* <header className="header">
+=======
+import headerLogo from "@/components/images/header/header_logo.svg";
+import blog_header_image from "@/components/images/blog_header.png";
+import blog_header_bg from "@/components/images/blog_header_bg.png";
+import blog_author from "@/components/images/blog_author.png";
+import header_logo from "@/components/images/header/header_logo.svg";
+import footerBg from "@/components/images/footer/footer_bg.png";
+import Link from "next/link";
+
+
+export default function BlogArticle() {
+  return (
+    <div className="bg-[#04030D] w-full">
+         <header className="header">
+>>>>>>> origin/main
             <div className="header-conatiner items-center">
                 <Link href="/" className="header_logo_link">
                     <Image
@@ -134,7 +150,11 @@ export default function BlogArticle() {
                     </span>
                 </button>
             </div>
+<<<<<<< HEAD
         </header> */}
+=======
+        </header>
+>>>>>>> origin/main
 
       <div
         className="bg-cover max-w-[1512px] mx-auto"
@@ -289,8 +309,13 @@ export default function BlogArticle() {
         </div>
 
         {/* Sidebar: In this article */}
+<<<<<<< HEAD
         <aside className="md:col-span-1 ">
           <div className="sticky top-[120px] text-sm">
+=======
+        <aside className="md:col-span-1">
+          <div className="sticky top-8 text-sm">
+>>>>>>> origin/main
             <h3 className="font-bold mb-2 opacity-40">IN THIS ARTICLE</h3>
             <ul className="space-y-2">
               <li>
@@ -642,6 +667,148 @@ export default function BlogArticle() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+      <footer className="footer">
+    <div className="footer_container">
+      <div className="footer_bg">
+        <Image src={footerBg} alt="star" />
+      </div>
+      <div className="foooter_top">
+        <div className="footer_top_right">
+          <a href="#" className="footer_logo_link">
+            <Image
+              src={headerLogo}
+              className="footer_logo"
+              alt="FCIFY Futures"
+            />
+          </a>
+          <h2 className="footer_top_right_title">
+            FXIFY&nbsp;is the premier futures prop trading firm for beginner and
+            experienced traders alike
+          </h2>
+        </div>
+        <div className="mr-123">
+          <h3 className="footer_nav_title">Explore</h3>
+          <ul className="footer_nav_list">
+            <li>
+              <a href="#" className="footer_nav_link">
+                Affiliate
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="mr-123">
+          <h3 className="footer_nav_title">Info</h3>
+          <ul className="footer_nav_list">
+            <li>
+              <a href="#" className="footer_nav_link">
+                How it Works
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Twitter (X)
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Get Funded
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="footer_nav_title">Follow</h3>
+          <ul className="footer_nav_list">
+            <li>
+              <a href="#" className="footer_nav_link">
+                Cancellation
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer_nav_link">
+                Terms
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer_center_line" />
+      <div className="footer_bottom">
+        <div>
+          <div className="footer_bottom_info_box_left">
+            <div className="footer_bottom_info_box">
+              <p className="footer_info_text">
+                FXIFY Futures Risk Disclosure: <br /> <br />
+                Futures and forex trading contains substantial risk and is not
+                for every investor. An investor could potentially lose all or
+                more than the initial investment. Risk capital is money that can
+                be lost without jeopardizing your financial security or
+                lifestyle. Only risk capital should be used for trading and only
+                those with sufficient risk capital should consider trading. Past
+                performance is not necessarily indicative of future results.
+              </p>
+            </div>
+            <div className="footer_bottom_info_box">
+              <p className="footer_info_text">
+                HYPOTHETICAL PERFORMANCE DISCLOSURE: <br /> <br />
+                Hypothetical performance results have many significant
+                performance and other limitations, some of which are described
+                below. No representation is being made that any account will or
+                is likely to achieve profits or losses similar to those shown on
+                the website or any promotional material.
+              </p>
+            </div>
+          </div>
+          <p className="footer_bottom_text">
+            © 2023 - 2024 FXIFY. All rights reserved.
+          </p>
+        </div>
+        <div className="footer_bottom_info_box_right">
+          <p className="footer_info_text">
+            CFTC Rule 4.41: <br /> <br />
+            Hypothetical or Simulated performance results have certain
+            limitations. Unlike an actual performance record, simulated results
+            do not represent actual trading. Also, because the trades have not
+            actually been executed, the results may have under-or-over
+            compensated for the impact, if any, of certain market factors, such
+            as lack of liquidity. Simulated trading programs, in general, are
+            also subject to the fact that they are designed with the benefit of
+            hindsight. No representation is being made that any account will or
+            is likely to achieve profit or losses similar to those shown. <br />
+            Testimonials appearing on this website may not be representative of
+            other clients or customers and is not a guarantee of future
+            performance or success. No representation is being made that any
+            evaluation account will achieve profit or losses similar to those
+            shown here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+>>>>>>> origin/main
     </div>
   );
 }
