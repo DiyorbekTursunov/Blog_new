@@ -1,0 +1,75 @@
+.Selector {
+    position: relative;
+    padding: get-d(6px);
+    border-radius: 1000px;
+    border: get-d(1.5px) solid rgba(#d5dfff, 0.1);
+    backdrop-filter: blur(get-d(2px));
+    background: linear-gradient(91deg,
+            rgba(123, 130, 235, 0.11) 24.35%,
+            rgba(38, 42, 84, 0.15) 99.89%);
+
+    &:hover {
+        .Selector_border {
+            opacity: 1;
+        }
+    }
+}
+
+.Selector_border {
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100.5%;
+    height: 102%;
+    border-radius: get-d(20px);
+
+    mix-blend-mode: lighten;
+
+    opacity: 0;
+
+    transition: 0.5s ease-in-out;
+    transition-property: opacity;
+}
+
+.Selector_content {
+    position: relative;
+    display: flex;
+}
+
+.Selector_select {
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    border-radius: 1000px;
+    border: get-d(1.5px) solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(132deg, #1a2047a9 24.38%, #3f4b76ab 100%);
+    backdrop-filter: blur(get-d(10px));
+}
+
+.Selector_content_item {
+    position: relative;
+    z-index: 5;
+    padding: get-d(8px) get-d(12px);
+
+    font-size: get-d(14px);
+
+    cursor: pointer;
+    user-select: none;
+
+    opacity: 0.6;
+
+    transition: 0.5s ease-in-out;
+
+    transition-property: opacity;
+    font-size: 14px;
+    font-weight: 400;
+
+    &.active {
+        opacity: 1;
+    }
+}
