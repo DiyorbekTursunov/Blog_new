@@ -54,25 +54,25 @@ export default function Faqs_article() {
 
     return (
         <>
-            <div className="relative">
-                <section className="relative z-20 hero_article pt-[148px] pb-[64px]">
-                    <div className="max-w-[1148px] w-full mx-auto">
-                        <div className="flex items-center gap-2 mb-[97px]">
-                            <Link href="#" className="cursor-pointer flex items-center gap-1 font-normal text-sm text-[#8B8FD680]">
+            <div className="big_container">
+                <section className="faqs_article_hero">
+                    <div className="faqs_article_hero_container">
+                        <div className="faqs_article_hero_top">
+                            <Link href="#" className="faqs_article_hero_top_link">
                                 <span className="hero_link">All collections</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10 17L15 12L10 7" stroke="#8B8FD6" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </Link>
-                            <Link href="#" className="cursor-pointer font-normal text-sm text-white ">
+                            <Link href="#" className="faqs_article_hero_top_link_white  cursor-pointer font-normal text-sm text-white ">
                                 <span className="hero_link">Getting Started</span>
                             </Link>
                         </div>
-                        <div className="max-w-[738px] mx-auto px-5 flex flex-col items-center">
-                            <a href="#" className="article_link mb-10 max-md:mb-5">
+                        <div className="faqs_article_hero_bottom">
+                            <a href="#" className="article_link ">
                                 <span>Getting Started</span>
                             </a>
-                            <h1 className="font-normal text-[64px] text-center mb-10 leading-[45px] w-full max-md:mb-5">Get Started with FXIFY</h1>
+                            <h1 className="faqs_article_hero_bottom_title">Get Started with FXIFY</h1>
                             <form
                                 className="hero_inp_box"
                                 onMouseEnter={() => setIsHover(true)}
@@ -154,8 +154,8 @@ export default function Faqs_article() {
                         </div>
                     </div>
                 </section>
-                <section className="relative z-20 pb-[191px] max-md:pb-[100px]">
-                    <div className="max-w-[688px] mx-auto">
+                <section className="faqs_article_info">
+                    <div className="faqs_article_info_container">
                         <Swiper
                             navigation={{
                                 nextEl: ".swiper-button-next",
@@ -168,7 +168,7 @@ export default function Faqs_article() {
                             {[0, 1, 2, 3, 4].map((index) => (
                                 <SwiperSlide key={index}>
                                     <div
-                                        className="faqs_article_bg border border-[#1E1E2B] rounded-[40px] p-9 transition-all duration-300"
+                                        className="faqs_article_bg "
                                         style={{
                                             background:
                                                 "linear-gradient(160.99deg, rgba(255, 255, 255, 0.036) 5.45%, rgba(255, 255, 255, 0.015) 99.45%)",
@@ -185,7 +185,7 @@ export default function Faqs_article() {
                                                 }}
                                             />
                                         <h2
-                                            className="text-left font-normal text-sm mb-9"
+                                            className="faqs_article_title"
                                             style={{
                                                 background: 'linear-gradient(90deg, #B9C3F4 0%, #6C728E 100%)',
                                                 WebkitBackgroundClip: 'text',
@@ -194,10 +194,10 @@ export default function Faqs_article() {
                                                 color: 'transparent'
                                             }}
                                         >Articles</h2>
-                                        <ul className="flex flex-col gap-[30px]">
+                                        <ul className="faqs_article_list">
                                             {faqs_articles.map(item => (
-                                                <li key={item.id} className="hover:opacity-50 transition-all duration-300">
-                                                    <a href="#" className="flex items-center justify-between">
+                                                <li key={item.id} className="faqs_article_list_item">
+                                                    <a href="#" className="faqs_article_list_item_link">
                                                         <span className="font-normal text-xl text-white">{item.title}</span>
                                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -213,7 +213,7 @@ export default function Faqs_article() {
                         </Swiper>
                     </div>
                 </section>
-                <div className="absolute top-0">
+                <div className="faqs_ariticle_main_bg">
                     <Image src={faqs_bg} alt="" />
                 </div>
             </div>

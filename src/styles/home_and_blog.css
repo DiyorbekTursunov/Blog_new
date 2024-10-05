@@ -885,7 +885,6 @@ body {
 }
 
 .email {
-    background-image: url(../components/images/social/email.png);
     background-size: cover;
     background-position: center center;
 }

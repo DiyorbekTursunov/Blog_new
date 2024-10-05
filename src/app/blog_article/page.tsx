@@ -5,10 +5,10 @@ import Image from "next/image";
 import blog_header_image from "../../components/images/blog_header.png";
 import blog_header_bg from "../../components/images/blog_header_bg.png";
 import blog_author from "../../components/images/blog_author.png";
-import Link from "next/link";
 import "../../styles/home_and_blog.css"
 import { BorderGradientLight } from "shared/components/border-gradient-light";
 import { useState } from "react";
+import "./style.css"
 
 export default function BlogArticle() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -21,20 +21,20 @@ export default function BlogArticle() {
   };
 
   return (
-    <div className="bg-[#04030D] w-full pt-16">
-      <div className="bg-cover max-w-[1512px] mx-auto"
+    <div className="blog_big_container">
+      <div className="blog_article_bg"
         style={{
           backgroundImage: `url(${blog_header_bg.src})`,
           backgroundPosition: "center 200px",
         }}
       >
-        <div className="max-w-[1150px] mx-auto flex items-center gap-16 pt-[96px] pb-[174px] text-[#fff]">
+        <div className="blog_article_container">
           <Image src={blog_header_image} alt="blog header image site" />
 
-          <div className="max-w-[700px] mx-auto">
-            <div className="flex items-center gap-6 mb-8">
+          <div className="blog_article_right">
+            <div className="blog_article_right_flex">
               <button
-                className="py-[14px] px-4 rounded-[100px] font-aventa text-[14px] leading-[17.29px]"
+                className="blog_article_right_btn"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(8, 5, 32, 0.4) 0%, rgba(38, 42, 84, 0.4) 100%)",
@@ -44,13 +44,13 @@ export default function BlogArticle() {
               >
                 Market Insights
               </button>
-              <span className="opacity-40 text-[#fff] uppercase">
+              <span className="blog_article_right_text">
                 24 april 2024
               </span>
             </div>
 
             <h1
-              className="text-[44px] leading-[48.4px]"
+              className="blog_article_right_title"
               style={{
                 color:
                   "linear-gradient(0deg, #D3D5E5, #D3D5E5),linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%)",
@@ -62,16 +62,16 @@ export default function BlogArticle() {
         </div>
       </div>
 
-      <div className="max-w-[1150px] mx-auto flex  justify-between text-[#fff]">
+      <div className="blog_article_right_bottom_container">
         {/* Main content */}
-        <div className="max-w-[714px] md:col-span-3">
+        <div className="blog_article_right_bottom_left">
           {/* Section: Sustainability Takes Center Stage */}
           <section className="mb-8">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="blog_article_right_bottom_left_title">
               Sustainability Takes Center Stage
             </h2>
             179.8
-            <p className="text-lg leading-7 opacity-60 ">
+            <p className="blog_article_right_bottom_left_text ">
               As environmental concerns continue to rise, the global shift
               towards sustainability is no longer a niche trend but a central
               focus for governments, corporations, and investors. Green energy,
@@ -85,7 +85,7 @@ export default function BlogArticle() {
           {/* Section: AI Industries */}
           <section className="mb-8">
             <h2
-              className="text-3xl font-bold mb-4"
+              className="blog_article_right_bottom_left_title"
               style={{
                 color:
                   "linear-gradient(0deg, #D3D5E5, #D3D5E5),linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%)",
@@ -94,7 +94,7 @@ export default function BlogArticle() {
               AI Industries
             </h2>
             <p
-              className="text-lg leading-7 opacity-60"
+              className="blog_article_right_bottom_left_text"
               style={{
                 color:
                   "linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);",
@@ -111,7 +111,7 @@ export default function BlogArticle() {
               decisions, and engage with customers.
             </p>
             <p
-              className="text-lg leading-7 mt-4 opacity-60"
+              className="blog_article_right_bottom_left_text  mt-4"
               style={{
                 color:
                   "linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);",
@@ -126,7 +126,7 @@ export default function BlogArticle() {
               accessible to a broader audience.
             </p>
             <p
-              className="text-lg leading-7 mt-4 opacity-60"
+              className="blog_article_right_bottom_left_text  mt-4"
               style={{
                 color:
                   "linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);",
@@ -147,7 +147,7 @@ export default function BlogArticle() {
           {/* Section: The Rise of Digital Currencies */}
           <section className="mb-8">
             <h2
-              className="text-3xl font-bold mb-4"
+              className="blog_article_right_bottom_left_title"
               style={{
                 color:
                   "linear-gradient(0deg, #D3D5E5, #D3D5E5),linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%)",
@@ -156,7 +156,7 @@ export default function BlogArticle() {
               The Rise of Digital Currencies
             </h2>
             <p
-              className="text-lg leading-7 opacity-60"
+              className="blog_article_right_bottom_left_text"
               style={{
                 color:
                   "linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);",
@@ -174,38 +174,38 @@ export default function BlogArticle() {
         </div>
 
         {/* Sidebar: In this article */}
-        <aside className="md:col-span-1 ">
-          <div className="sticky top-[120px] text-sm">
-            <h3 className="font-bold mb-2 opacity-40">IN THIS ARTICLE</h3>
+        <aside className="blog_article_bottom_left ">
+          <div className="blog_article_bottom_left_styky">
+            <h3 className="blog_article_bottom_left_title">IN THIS ARTICLE</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-[#6F78FF] hover:text-[#B9C3F4]">
+                <a href="#" className="blog_article_bottom_left_link_1">
                   Sustainability Takes Center Stage
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#fff] hover:text-[#B9C3F4]">
+                <a href="#" className="blog_article_bottom_left_link_2">
                   The Rise of Digital Currencies
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#fff] hover:text-[#B9C3F4]">
+                <a href="#" className="blog_article_bottom_left_link_2">
                   AI Industries
                 </a>
               </li>
             </ul>
 
             <div className="mt-8">
-              <h4 className="font-bold mb-2 opacity-90">Author</h4>
-              <div className="flex items-center">
+              <h4 className="blog_article_bottom_left_author">Author</h4>
+              <div className="blog_article_bottom_left_author_bottom_box">
                 <Image
                   src={blog_author}
                   alt="Anna Miller"
-                  className="w-12 h-12 rounded-full mr-3"
+                  className="blog_article_bottom_left_author_bottom_box_img"
                 />
                 <div>
-                  <p className="text-lg font-semibold">Anna Miller</p>
-                  <p className="text-sm text-[#6C728E]">Analyst</p>
+                  <p className="blog_article_bottom_left_author_bottom_box_title">Anna Miller</p>
+                  <p className="blog_article_bottom_left_author_bottom_box_text">Analyst</p>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function BlogArticle() {
       <section className="category">
         <div className="category_container">
           <div className="category_top">
-            <h2 className="font-normal text-[40px] max-md:text-2xl text-center">Explore by category</h2>
+            <h2 className="category_title">Explore by category</h2>
             
           </div>
           <div className="category_card_box">
@@ -268,7 +268,6 @@ export default function BlogArticle() {
           </div>
         </div>
       </section>
-
       <section className="social">
         <div className="socila_container">
           <div className="social_card email">
