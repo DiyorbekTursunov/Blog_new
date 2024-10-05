@@ -1,21 +1,20 @@
-"use client"
+"use client";
 
 import "../../styles/home_and_blog.css";
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { BorderGradientLight } from 'shared/components/border-gradient-light';
+import Link from "next/link";
+import React, { useState } from "react";
+import { BorderGradientLight } from "shared/components/border-gradient-light";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import './style.css';
-import { Pagination, Navigation } from 'swiper/modules';
+import "./style.css";
+import { Pagination, Navigation } from "swiper/modules";
 
 export default function Faqs_article() {
     const [isHover, setIsHover] = useState<boolean>(false);
-    const [isHover2, setIsHover2] = useState<boolean>(false);
-    const [isHover3, setIsHover3] = useState<boolean>(false);
+    const [hoverStates, setHoverStates] = useState<boolean[]>(Array(6).fill(false)); // Dynamic hover state array
 
     const faqs_articles = [
         { id: 1, title: "Introduction to FXIFY" },
@@ -27,12 +26,28 @@ export default function Faqs_article() {
         { id: 7, title: "KYC/AML Policies" },
         { id: 8, title: "Futures Instrument List" },
         { id: 9, title: "Ongoing AML Monitoring" },
-        { id: 10, title: "Ongoing KYC/Documentation Monitoring" }
+        { id: 10, title: "Ongoing KYC/Documentation Monitoring" },
     ];
 
     const pagination = {
         clickable: true,
         renderBullet: (index: number, className: string) => `<span class="${className}">${index + 1}</span>`,
+    };
+
+    const handleMouseEnter = (index: number) => {
+        setHoverStates((prev) => {
+            const newStates = [...prev];
+            newStates[index] = true;
+            return newStates;
+        });
+    };
+
+    const handleMouseLeave = (index: number) => {
+        setHoverStates((prev) => {
+            const newStates = [...prev];
+            newStates[index] = false;
+            return newStates;
+        });
     };
 
     return (
@@ -41,13 +56,13 @@ export default function Faqs_article() {
                 <div className="max-w-[1148px] w-full mx-auto">
                     <div className="flex items-center gap-2 mb-[97px]">
                         <Link href="#" className="flex items-center gap-1 font-normal text-sm text-[#8B8FD680]">
-                            <span className='hero_link'>All collections</span>
+                            <span className="hero_link">All collections</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 17L15 12L10 7" stroke="#8B8FD6" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </Link>
                         <Link href="#" className="font-normal text-sm text-white ">
-                            <span className='hero_link'>Getting Started</span>
+                            <span className="hero_link">Getting Started</span>
                         </Link>
                     </div>
                     <div className="max-w-[738px] mx-auto px-5 flex flex-col items-center">
@@ -55,15 +70,18 @@ export default function Faqs_article() {
                             <span>Getting Started</span>
                         </a>
                         <h1 className="font-normal text-[64px] text-center mb-10 leading-[45px] w-full max-md:mb-5">Get Started with FXIFY</h1>
-                        <form className="hero_inp_box"
+                        <form
+                            className="hero_inp_box"
                             onMouseEnter={() => setIsHover(true)}
                             onMouseLeave={() => setIsHover(false)}
                         >
-                            <BorderGradientLight isActive={isHover}
+                            <BorderGradientLight
+                                isActive={isHover}
                                 customStyle={{
                                     opacity: isHover ? 1 : 0,
-                                    transition: 'opacity 0.3s ease-in-out',
-                                }} />
+                                    transition: "opacity 0.3s ease-in-out",
+                                }}
+                            />
                             <input
                                 type="search"
                                 name="hero_search"
@@ -74,13 +92,7 @@ export default function Faqs_article() {
                             <button type="submit" className="hero_search_btn">
                                 <div>
                                     <span>Search</span>
-                                    <svg
-                                        width={18}
-                                        height={18}
-                                        viewBox="0 0 18 19"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    <svg width={18} height={18} viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M8.625 16.25C12.56 16.25 15.75 13.06 15.75 9.12501C15.75 5.18998 12.56 2.00001 8.625 2.00001C4.68997 2.00001 1.5 5.18998 1.5 9.12501C1.5 13.06 4.68997 16.25 8.625 16.25Z"
                                             stroke="white"
@@ -88,31 +100,13 @@ export default function Faqs_article() {
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                         />
-                                        <path
-                                            d="M16.5 17L15 15.5"
-                                            stroke="white"
-                                            strokeWidth="1.35"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
+                                        <path d="M16.5 17L15 15.5" stroke="white" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                                 <span className="hero_search_btn_elipse">
-                                    <svg
-                                        width={125}
-                                        height={45}
-                                        viewBox="0 0 125 45"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    <svg width={125} height={45} viewBox="0 0 125 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_f_1163_7618)">
-                                            <ellipse
-                                                cx="60.1816"
-                                                cy="56.8232"
-                                                rx={47}
-                                                ry="27.5"
-                                                fill="#BDBBF5"
-                                            />
+                                            <ellipse cx="60.1816" cy="56.8232" rx={47} ry="27.5" fill="#BDBBF5" />
                                         </g>
                                         <defs>
                                             <filter
@@ -133,22 +127,9 @@ export default function Faqs_article() {
                                 </span>
                             </button>
                             <span className="search_elipse">
-                                <svg
-                                    width={543}
-                                    height={61}
-                                    viewBox="0 0 543 61"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                                <svg width={543} height={61} viewBox="0 0 543 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_f_1163_7614)">
-                                        <ellipse
-                                            cx="271.5"
-                                            cy="30.5"
-                                            rx="191.5"
-                                            ry="30.5"
-                                            fill="#4852F5"
-                                            fillOpacity="0.2"
-                                        />
+                                        <ellipse cx="271.5" cy="30.5" rx="191.5" ry="30.5" fill="#4852F5" fillOpacity="0.2" />
                                     </g>
                                     <defs>
                                         <filter
@@ -182,22 +163,26 @@ export default function Faqs_article() {
                         modules={[Pagination, Navigation]}
                         className="mySwiper bg-transparent"
                     >
-                        {[isHover2, isHover3].map((isHover, index) => (
+                        {[0, 1, 2, 3, 4].map((index) => (
                             <SwiperSlide key={index}>
-                                <div className="border border-[#1E1E2B] rounded-[40px] p-9"
+                                <div
+                                    className="border border-[#1E1E2B] rounded-[40px] p-9"
                                     style={{
-                                        background: 'linear-gradient(160.99deg, rgba(255, 255, 255, 0.036) 5.45%, rgba(255, 255, 255, 0.015) 99.45%)',
-                                        backdropFilter: 'blur(40px)'
+                                        background:
+                                            "linear-gradient(160.99deg, rgba(255, 255, 255, 0.036) 5.45%, rgba(255, 255, 255, 0.015) 99.45%)",
+                                        backdropFilter: "blur(40px)",
                                     }}
-                                    onMouseEnter={() => index === 0 ? setIsHover2(true) : setIsHover3(true)}
-                                    onMouseLeave={() => index === 0 ? setIsHover2(false) : setIsHover3(false)}
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onMouseLeave={() => handleMouseLeave(index)}
                                 >
-                                    <BorderGradientLight isActive={isHover}
+                                    <BorderGradientLight
+                                        isActive={hoverStates[index]}
                                         customStyle={{
-                                            opacity: isHover ? 1 : 0,
-                                            transition: 'opacity 0.3s ease-in-out',
-                                        }} />
-                                     <h2
+                                            opacity: hoverStates[index] ? 1 : 0,
+                                            transition: "opacity 0.3s ease-in-out",
+                                        }}
+                                    />
+                                    <h2
                                     className="text-left font-normal text-sm mb-9"
                                     style={{
                                         background: 'linear-gradient(90deg, #B9C3F4 0%, #6C728E 100%)',
