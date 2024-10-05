@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import faqs_bg from "@/components/images/faqs_home.png"
 import Link from 'next/link'
-import { BorderGradientLight } from 'shared/components/border-gradient-light';
+import { BorderGradientLight } from './border-gradient-light';
 import "../../styles/home_and_blog.css";
 
 
@@ -78,116 +78,123 @@ export default function Faqs_introduction() {
                             <p className="gardient_color font-normal text-base text-[#6F78FF] mb-6 leading-[11px]">Why FXIFY?</p>
                             <p className="gardient_color font-normal text-base text-[#6F78FF] mb-[71px]">Here's What We Offer</p>
 
-                            <div className="introduction_right_card block pt-9 px-8 pb-[34px]">
-                                <div className=" left-0">
-                                    <h2 className="hover_faq_card_title">
-                                        Related Articles
-                                    </h2>
-                                    <ul className="flex flex-col gap-5">
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    Introduction to FXIFY
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                            <div className="introduction_right_card block pt-9 px-8 pb-[34px]"
+                                onMouseEnter={() => setIsHover(true)}
+                                onMouseLeave={() => setIsHover(false)}
+                            >
+                                <BorderGradientLight
+                                    isActive={isHover}
+                                    customStyle={{
+                                        opacity: isHover ? 1 : 0,
+                                    }}
+                                />
+                                <h2 className="hover_faq_card_title">
+                                    Related Articles
+                                </h2>
+                                <ul className="flex flex-col gap-5">
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                Introduction to FXIFY
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    Starter Account Revamp
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                Starter Account Revamp
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    Tradovate Login
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                Tradovate Login
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    Rithmic FAQ/Login
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                Rithmic FAQ/Login
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    Payout FAQs
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                Payout FAQs
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li className="mt-2">
-                                            <a
-                                                href="#"
-                                                className="hover_faq_card_link"
-                                            >
-                                                <p className="hover_faq_card_link_text leading-[13px]">
-                                                    News Trading Policy
-                                                </p>
-                                                <span className="hover_faq_card_link_arrow">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li className="mt-2">
+                                        <a
+                                            href="#"
+                                            className="hover_faq_card_link"
+                                        >
+                                            <p className="hover_faq_card_link_text leading-[13px]">
+                                                News Trading Policy
+                                            </p>
+                                            <span className="hover_faq_card_link_arrow">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M2.91602 10H16.941" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
 
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

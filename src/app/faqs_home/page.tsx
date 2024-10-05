@@ -2,7 +2,7 @@
 
 import "../../styles/home_and_blog.css";
 import { useState } from "react";
-import { BorderGradientLight } from "shared/components/border-gradient-light";
+import { BorderGradientLight } from "./border-gradient-light";
 
 
 export default function FaqsHome() {
