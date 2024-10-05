@@ -38,5 +38,19 @@
   margin-top: 48px;
 }
 
+.Card_border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
+  border-radius: inherit;
 
+  opacity: 0;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+
+  transition: 0.5s ease-in-out;
+  transition-property: opacity;
+}

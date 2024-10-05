@@ -246,7 +246,6 @@ export default function BlogArticle() {
                   isActive={hoverIndex === index}
                   customStyle={{
                     opacity: hoverIndex === index ? 1 : 0,  // Change opacity based on hover state
-                    transition: 'opacity 0.3s ease-in-out', // Smooth transition for opacity
                   }}
                 />
                 <div className="category_card_top_box">

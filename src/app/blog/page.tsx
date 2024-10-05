@@ -1525,9 +1525,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-
-
             <section className="category">
                 <div className="category_container">
                     <div className="category_top">
@@ -1539,7 +1536,7 @@ export default function Home() {
                         {categories.map((category, index) => (
                             <div
                                 key={category.id}
-                                className="category_card card"
+                                className="category_card "
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -1547,7 +1544,6 @@ export default function Home() {
                                     isActive={hoverIndex === index}
                                     customStyle={{
                                         opacity: hoverIndex === index ? 1 : 0,  // Change opacity based on hover state
-                                        transition: 'opacity 0.3s ease-in-out', // Smooth transition for opacity
                                     }}
                                 />
 
