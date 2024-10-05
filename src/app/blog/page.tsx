@@ -769,7 +769,14 @@ export default function Home() {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className="backdrop-blur-md rounded-3xl overflow-hidden">
-                                <div className="article_card">
+                                <div className="article_card"
+                                    onMouseEnter={() => setIsHover2(true)}
+                                    onMouseLeave={() => setIsHover2(false)}
+                                >
+                                    <BorderGradientLight isActive={isHover2}
+                                        customStyle={{
+                                            opacity: isHover2 ? 1 : 0,  // Change opacity based on hover state
+                                        }} />
                                     <div className="article_left">
                                         <h2 className="article_card_subtitle">
                                             28 april, 2024
