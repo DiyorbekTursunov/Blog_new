@@ -3,7 +3,7 @@
 import "../../styles/home_and_blog.css";
 import { useState } from "react";
 import { BorderGradientLight } from "./border-gradient-light";
-
+import "./style.css"
 
 export default function FaqsHome() {
     const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -109,7 +109,7 @@ export default function FaqsHome() {
         }
     ]
     return (
-        <div className="pt-[20px]">
+        <div className="pt-5">
             <section className="faq_hero">
                 <div className="hero_container">
                     <a href="#" className="faq_hero_link">
@@ -380,7 +380,7 @@ export default function FaqsHome() {
                                         <h2 className="faq_card_title">
                                             {faq.title}
                                         </h2>
-                                        <p className="faq_card_text  max-w-[174px] ">
+                                        <p className="faq_card_text  max-w-174 ">
                                             {faq.text}
                                         </p>
                                     </div>
