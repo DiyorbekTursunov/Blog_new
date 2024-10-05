@@ -37,6 +37,8 @@ export default function Home() {
     const [hoverIndex, setHoverIndex] = useState<number | null>(null);
     const [isHover, setIsHover] = useState<boolean>(false)
 
+    const [isHover2, setIsHover2] = useState<boolean>(false)
+
     const handleMouseEnter = (index: number) => {
         setHoverIndex(index);
     };
@@ -247,7 +249,6 @@ export default function Home() {
                         <BorderGradientLight isActive={isHover}
                             customStyle={{
                                 opacity: isHover ? 1 : 0,  // Change opacity based on hover state
-                                transition: 'opacity 0.3s ease-in-out', // Smooth transition for opacity
                             }} />
                         <input
                             type="search"
@@ -389,7 +390,14 @@ export default function Home() {
                             className="mySwiper"
                         >
                             <SwiperSlide className="backdrop-blur-md rounded-3xl overflow-hidden">
-                                <div className="article_card">
+                                <div className="article_card"
+                                    onMouseEnter={() => setIsHover2(true)}
+                                    onMouseLeave={() => setIsHover2(false)}
+                                >
+                                    <BorderGradientLight isActive={isHover2}
+                                        customStyle={{
+                                            opacity: isHover2 ? 1 : 0,  // Change opacity based on hover state
+                                        }} />
                                     <div className="article_left">
                                         <h2 className="article_card_subtitle">
                                             28 april, 2024
