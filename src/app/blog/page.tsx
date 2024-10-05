@@ -389,7 +389,7 @@ export default function Home() {
                         <Swiper
                             className="mySwiper"
                         >
-                            <SwiperSlide className="backdrop-blur-md rounded-3xl overflow-hidden">
+                            <SwiperSlide className="blur">
                                 <div className="article_card"
                                     onMouseEnter={() => setIsHover2(true)}
                                     onMouseLeave={() => setIsHover2(false)}
@@ -768,7 +768,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide className="backdrop-blur-md rounded-3xl overflow-hidden">
+                            <SwiperSlide className="blur">
                                 <div className="article_card"
                                     onMouseEnter={() => setIsHover2(true)}
                                     onMouseLeave={() => setIsHover2(false)}

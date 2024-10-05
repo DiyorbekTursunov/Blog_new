@@ -1,0 +1,8 @@
+.blur {
+    backdrop-filter: blur(4px);
+    /* md */
+    border-radius: 1.5rem;
+    /* 3xl */
+    overflow: hidden;
+
+}
