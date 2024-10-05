@@ -18,6 +18,7 @@ import { BorderGradientLight } from "shared/components/border-gradient-light";
 import { Selector } from "./selector";
 
 
+
 // swiper
 
 // Import Swiper React components
@@ -30,7 +31,7 @@ import 'swiper/css/effect-cards';
 // import './styles.css';
 
 // import required modules
-import { EffectCards } from 'swiper/modules';
+
 
 export default function Home() {
     const [hoverIndex, setHoverIndex] = useState<number | null>(null);

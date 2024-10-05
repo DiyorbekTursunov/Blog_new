@@ -4,6 +4,7 @@ import "../../styles/home_and_blog.css";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BorderGradientLight } from "shared/components/border-gradient-light";
+import faqs_bg from "@/components/images/faqs_home.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -166,11 +167,12 @@ export default function Faqs_article() {
                         {[0, 1, 2, 3, 4].map((index) => (
                             <SwiperSlide key={index}>
                                 <div
-                                    className="border border-[#1E1E2B] rounded-[40px] p-9"
+                                    className="border border-[#1E1E2B] rounded-[40px] p-9 transition-all duration-300"
                                     style={{
                                         background:
                                             "linear-gradient(160.99deg, rgba(255, 255, 255, 0.036) 5.45%, rgba(255, 255, 255, 0.015) 99.45%)",
                                         backdropFilter: "blur(40px)",
+                                        
                                     }}
                                     onMouseEnter={() => handleMouseEnter(index)}
                                     onMouseLeave={() => handleMouseLeave(index)}
