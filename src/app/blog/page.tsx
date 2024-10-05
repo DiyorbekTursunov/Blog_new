@@ -385,9 +385,6 @@ export default function Home() {
 
                     <div className="article_card_box">
                         <Swiper
-                            effect={'cards'}
-                            grabCursor={true}
-                            modules={[EffectCards]}
                             className="mySwiper"
                         >
                             <SwiperSlide className="backdrop-blur-md rounded-3xl overflow-hidden">
