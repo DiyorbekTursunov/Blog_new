@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-.privacy_terms{
+
+.privacy_disclaimer{
     padding-top: 190px;
     padding-bottom: 183px;
 }
-.privacy_terms> div{
+.privacy_disclaimer > div{
     max-width: 1188px;
     width: 100%;
     margin-left: auto;
@@ -16,7 +17,7 @@
     padding-right: 20px;
 }
 
-.privacy_terms>div>h1 {
+.privacy_disclaimer>div> h1 {
     font-size: 64px;
     font-weight: 400;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
@@ -25,21 +26,21 @@
     color: transparent;
 }
 
-.privacy_terms>div>h2 {
+.privacy_disclaimer>div>h2 {
     font-size: 40px;
     font-weight: 400;
     background: linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);
     -webkit-background-clip: text;
     color: transparent;
 }
-.privacy_terms>div>h3 {
+.privacy_disclaimer>div>h3 {
     font-size: 24px;
     font-weight: 400;
     background: linear-gradient(179.8deg, #D3D5E5 0.17%, #AEB0C9 99.83%);
     -webkit-background-clip: text;
     color: transparent;
 }
-.privacy_terms>div>p {
+.privacy_disclaimer>div>p {
     font-size: 16px;
     font-weight: 400;
     color: #b0b4d7;
@@ -47,21 +48,21 @@
 }
 
 @media(max-width:1024px) {
-    .privacy_terms{
+    .privacy_disclaimer{
         padding-top: 190px;
         padding-bottom: 183px;
     }
-    .privacy_terms>div>h1 {
+    .privacy_disclaimer>div>h1 {
         font-size: 44px;
     }
     
-    .privacy_terms>div>h2 {
+    .privacy_disclaimer>div>h2 {
         font-size: 30px;
     }
-    .privacy_terms>div>h3 {
+    .privacy_disclaimer>div>h3 {
         font-size: 20px;
     }
-    .privacy_terms>div>p {
+    .privacy_disclaimer>div>p {
         font-size: 14px;
     }
 }
